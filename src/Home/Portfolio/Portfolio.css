@@ -1,28 +1,88 @@
-.swiper {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    padding: 50px;
+/* Portfolio.css */
+.portfolio-section {
+    padding: 60px 30px;
+    background-color: #000;
+    color: #fff;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
+.portfolio-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
+.portfolio-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.portfolio-header p {
+    max-width: 400px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.more-work-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.portfolio-swiper {
+    padding-top: 20px;
+}
+
+.portfolio-card {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    height: 60vh;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-image {
+    width: 32vh;
+    height: 48vh;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.mySwiper{
-    height: 30vh;
+.portfolio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portfolio-swiper {
+        padding-top: 10px;
+    }
+
+    .swiper-slide {
+        width: 80%;
+    }
+
+    .portfolio-card {
+        height: auto;
+    }
+
+    .portfolio-image {
+        height: auto;
+    }
 }

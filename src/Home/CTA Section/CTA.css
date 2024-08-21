@@ -1,0 +1,26 @@
+.about-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 6vh 0;
+}
+
+.about-column {
+    text-align: left;
+    max-width: 30%;
+}
+
+.column-heading,
+.arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.column-description {
+    font-size: 1em;
+    line-height: 1.5em;
+}

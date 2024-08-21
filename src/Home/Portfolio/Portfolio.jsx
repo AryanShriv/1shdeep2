@@ -1,44 +1,109 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
 import "./Portfolio.css";
-
-// import required modules
+import img from "../../Assets/Portfolio/img.jfif"
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 
-export default function App() {
+export default function Portfolio() {
   return (
-    <>
+    <section className="portfolio-section container">
+      <div className="portfolio-header">
+        <div>
+          <h2>PORTFOLIO</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy.
+          </p>
+        </div>
+        <a href="#more" className="more-work-link">
+          MORE WORK <span className="arrow">→</span>
+        </a>
+      </div>
+
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={4}
+        spaceBetween={20}
         freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
+        pagination={false}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         modules={[Autoplay, FreeMode, Pagination]}
-        className="mySwiper"
+        className="portfolio-swiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 1" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 1" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 1" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 1" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 2" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 2" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="portfolio-card">
+            <img src={img} alt="Project 2" className="portfolio-image" />
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+        {/* Repeat SwiperSlide as needed */}
       </Swiper>
-    </>
+    </section>
   );
 }
