@@ -33,7 +33,7 @@ header {
     cursor: pointer;
     position: relative;
     outline: none;
-    transition: background-color 250ms linear;
+    transition: background-color 80ms linear;
 }
 
 .header__button[data-open='true'] {

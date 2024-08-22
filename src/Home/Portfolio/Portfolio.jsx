@@ -4,8 +4,9 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "./Portfolio.css";
-import img from "../../Assets/Portfolio/img.jfif"
+import img from "../../Assets/Portfolio/img.jfif";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   return (
@@ -34,7 +35,9 @@ export default function Portfolio() {
       >
         <SwiperSlide>
           <div className="portfolio-card">
-            <img src={img} alt="Project 1" className="portfolio-image" />
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -44,7 +47,9 @@ export default function Portfolio() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="portfolio-card">
-            <img src={img} alt="Project 1" className="portfolio-image" />
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -54,7 +59,9 @@ export default function Portfolio() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="portfolio-card">
-            <img src={img} alt="Project 1" className="portfolio-image" />
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -64,7 +71,9 @@ export default function Portfolio() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="portfolio-card">
-            <img src={img} alt="Project 1" className="portfolio-image" />
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -74,7 +83,9 @@ export default function Portfolio() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="portfolio-card">
-            <img src={img} alt="Project 2" className="portfolio-image" />
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -84,7 +95,9 @@ export default function Portfolio() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="portfolio-card">
-            <img src={img} alt="Project 2" className="portfolio-image" />
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -92,17 +105,6 @@ export default function Portfolio() {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="portfolio-card">
-            <img src={img} alt="Project 2" className="portfolio-image" />
-            <h3>OUR SERVICES</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-        </SwiperSlide>
-        {/* Repeat SwiperSlide as needed */}
       </Swiper>
     </section>
   );

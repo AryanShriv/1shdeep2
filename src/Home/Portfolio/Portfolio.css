@@ -80,9 +80,12 @@
 
     .portfolio-card {
         height: auto;
+        margin-right: 30px;
     }
 
     .portfolio-image {
         height: auto;
     }
+    
+    
 }

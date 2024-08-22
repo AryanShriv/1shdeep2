@@ -1,0 +1,67 @@
+.company-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full screen height */
+    background-image: url('../../Assets/About/1shdeep.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay with some transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.company-names {
+    color: white;
+    text-align: center;
+}
+
+.company-names h1 {
+    margin: 10px 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .company-names h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .company-names h1 {
+        font-size: 1.5rem;
+    }
+}

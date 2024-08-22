@@ -44,3 +44,8 @@
 .client-card:hover {
     transform: translateY(-10px);
 }
+
+@media (max-width: 768px) {
+    .clients-grid {
+    grid-template-columns: repeat(1, 1fr);
+}}

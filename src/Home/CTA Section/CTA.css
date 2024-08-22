@@ -24,3 +24,10 @@
     font-size: 1em;
     line-height: 1.5em;
 }
+
+/* Mobile Portrait */
+@media (max-width: 768px) {
+    .CTA-section {
+        display: none;
+    }
+}
