@@ -1,0 +1,151 @@
+section{
+    margin-top: 5vh;
+    overflow: hidden;
+}
+
+/* FlipSection.css */
+.flip-section {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 42px;
+    background-color: #f4f4f4;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-text {
+    position: relative;
+    height: 2rem;
+}
+
+.flip-word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.flip-word.active {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+}
+
+/* Slide-In Flip Animation */
+.flip-word-o {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%) rotateX(90deg);
+    /* Slide from bottom and rotated */
+    transform-origin: bottom;
+    transition: opacity 0.6s, transform 0.6s ease-in-out;
+}
+
+.flip-word-o.active {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    /* Slide to original position */
+    transform-origin: bottom;
+}
+
+/* Zoom-In Flip Animation */
+.flip-word-p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.5) rotateX(90deg);
+    /* Start small and rotated */
+    transform-origin: bottom;
+    transition: opacity 0.6s, transform 0.6s ease-out;
+}
+
+.flip-word-p.active {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+    /* Zoom in to original size */
+    transform-origin: bottom;
+}
+
+/* Fade-In Flip Animation */
+.flip-word-q {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: rotateX(90deg);
+    /* Start rotated */
+    transform-origin: bottom;
+    transition: opacity 1s, transform 1s ease-in;
+}
+
+.flip-word-q.active {
+    opacity: 1;
+    transform: rotateX(0deg);
+    /* Flip to original position */
+    transform-origin: bottom;
+}
+
+/* Bounce Flip Animation */
+.flip-word-w {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%) rotateX(90deg);
+    /* Start off-screen and rotated */
+    transform-origin: bottom;
+    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.flip-word-w.active {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    /* Bounce to original position */
+    transform-origin: bottom;
+}
+
+/* Cube Flip Animation */
+.flip-text {
+    position: relative;
+    height: 2rem;
+    perspective: 1000px;
+    /* Required for the cube effect */
+}
+
+.flip-word-e {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: rotateY(90deg);
+    /* Start as the side of a cube */
+    transform-origin: center;
+    transition: opacity 0.6s, transform 0.6s ease-in-out;
+}
+
+.flip-word-e.active {
+    opacity: 1;
+    transform: rotateY(0deg);
+    /* Rotate to the front face */
+    transform-origin: center;
+}
