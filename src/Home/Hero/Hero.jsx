@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import BG from "../../Assets/Hero/BG.mp4"
+import BG from "../../Assets/Hero/Hero-BG.mp4"
 
 const HeroSection = () => {
   return (
@@ -16,8 +16,7 @@ const HeroSection = () => {
       ></video>
       <div className="overlay"></div>
       <div className="hero-content">
-        <h1>Your Hero Title</h1>
-        <p>Your subtitle or description goes here.</p>
+        <h1>INNOVATE</h1>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import Portfolio from "./Portfolio/Portfolio"
 import Clients from "./Clients/Clients"
 import Contact from "./Contact/Contact"
 import Blogs from "./Blogs/Blogs"
+import Newsletter from './Newsletter/Newsletter'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Portfolio/>
         <Clients/>
         <Contact/>
+        <Newsletter/>
         <Blogs/>
     </div>
   )

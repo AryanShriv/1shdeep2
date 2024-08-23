@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import revealer from "circular-revealer";
-
-import Logo from "../../Assets/Logos/BLACK 1S.png"
+import Logo from "../../Assets/Logos/WHITE 1S.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -12,6 +12,7 @@ const Header = () => {
   useEffect(() => {
     const actionBtn = actionBtnRef.current;
     const nav = navRef.current;
+    const links = nav.querySelectorAll("a"); // Select all links within the nav
 
     const revealerNav = revealer({
       revealElementSelector: ".nav-js",
@@ -31,8 +32,22 @@ const Header = () => {
 
     actionBtn.addEventListener("click", toggleNav);
 
+    // Add click event to each link to close the nav
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (isRevealed) {
+          toggleNav(); // Close the nav if a link is clicked
+        }
+      });
+    });
+
+    
+
     return () => {
       actionBtn.removeEventListener("click", toggleNav);
+      links.forEach((link) => {
+        link.removeEventListener("click", toggleNav);
+      });
     };
   }, [isRevealed]);
 
@@ -45,6 +60,8 @@ const Header = () => {
       );
     }
   }, [isRevealed]);
+
+  
 
   return (
     <header>
@@ -60,19 +77,13 @@ const Header = () => {
         <nav className="header__nav nav-js" ref={navRef}>
           <ul className="header__menu">
             <li className="header__menu-item">
-              <a href="#">Works</a>
+              <Link to="/Projects">Projects</Link>
             </li>
             <li className="header__menu-item">
-              <a href="#">News</a>
+              <a href="/#Clients">Clients</a>
             </li>
             <li className="header__menu-item">
-              <a href="#">About</a>
-            </li>
-            <li className="header__menu-item">
-              <a href="#">Help</a>
-            </li>
-            <li className="header__menu-item">
-              <a href="#">Contacts</a>
+              <a href="/#Blogs">Blogs</a>
             </li>
           </ul>
         </nav>

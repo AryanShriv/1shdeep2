@@ -17,29 +17,20 @@
 }
 
 .title {
-    font-size: 85px;
+    font-size: 90px;
     line-height: 1.2;
     font-weight: bold;
     width: max-content;
     text-align: left;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
 }
 
 .description {
     margin: 20px 0;
     font-size: 1rem;
     text-align: left;
-}
-
-.contact-link {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-}
-
-.contact-link .arrow {
-    margin-left: 10px;
 }
 
 .image-container {
@@ -111,9 +102,12 @@
         font-size: 0.9rem;
         text-align: center;
     }
-    
+
     .contact-link {
         font-size: 1rem;
+    }
+
+    .about-contact {
         justify-content: center;
     }
 }

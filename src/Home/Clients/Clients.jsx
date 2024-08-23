@@ -3,7 +3,7 @@ import "./Clients.css";
 
 const ClientsSection = () => {
   return (
-    <section className="clients-section container">
+    <section id="Clients" className="clients-section container">
       <h2>OUR CLIENTS</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting

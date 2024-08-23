@@ -1,6 +1,6 @@
 .about-columns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     background-color: black;
     color: white;
@@ -12,13 +12,6 @@
     max-width: 30%;
 }
 
-.column-heading,
-.arrow {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-}
 
 .column-description {
     font-size: 1em;
@@ -30,4 +23,12 @@
     .CTA-section {
         display: none;
     }
+}
+
+@media (max-width: 1024px) {
+    .about-columns{
+        justify-content:space-evenly;
+    }
+
+
 }

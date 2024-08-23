@@ -18,9 +18,12 @@
 }
 
 .contact-heading {
-    font-size: 3em;
+    font-size: 120px;
     font-weight: bold;
     margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
 }
 
 .contact-arrow {
@@ -58,9 +61,17 @@
     text-decoration: underline;
 }
 
+.si {
+    padding: 5px;
+}
+
 @media screen and (max-width: 768px) {
     .contact-section {
         padding: 20px;
+    }
+
+    .contact-heading {
+        font-size: 54px;
     }
 
     .contact-content,
@@ -68,6 +79,7 @@
         flex-direction: column;
         align-items: flex-start;
         max-width: 100%;
+        margin-bottom: 0;
     }
 
     .contact-arrow {

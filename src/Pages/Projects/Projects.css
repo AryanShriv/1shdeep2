@@ -1,67 +1,75 @@
-.company-section {
+.projects-section {
+    position: relative;
+    color: white;
+    background-color: black;
+}
+
+.projects-heading {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.projects-heading h1 {
+    font-size: 68px;
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+}
+
+.projects-heading p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+.projects-images {
+    position: relative;
+}
+
+.projects-image {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* Full screen height */
-    background-image: url('../../Assets/About/1shdeep.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 5px;
+    overflow: hidden;
 }
 
-.overlay {
+.projects-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-image-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Overlay with some transparency */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.company-names-bar {
+    position: sticky;
+    bottom: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.content {
     text-align: center;
-    color: white;
+    gap: 20px;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
-.section-heading {
-    font-size: 2.5rem;
+.company-name {
+    font-size: 2em;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.company-names {
-    color: white;
-    text-align: center;
-}
-
-.company-names h1 {
-    margin: 10px 0;
-    font-size: 3rem;
-    font-weight: bold;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .section-heading {
-        font-size: 2rem;
-    }
-
-    .company-names h1 {
-        font-size: 2rem;
-    }
+.project-section{
+    flex-direction: column;
 }
-
-@media (max-width: 480px) {
-    .section-heading {
-        font-size: 1.5rem;
-    }
-
-    .company-names h1 {
-        font-size: 1.5rem;
-    }
 }
