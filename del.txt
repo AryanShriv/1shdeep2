@@ -1,0 +1,35 @@
+<Swiper
+          slidesPerView={1} /* Show 1 slide on small screens */
+          spaceBetween={20}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, FreeMode]}
+          className="mySwiper"
+        >
+        <SwiperSlide className="portfolio-slide">
+          <div className="portfolio-card">
+            <Link to="/Projects">
+              <img src={img} alt="Project 1" className="portfolio-image" />
+            </Link>
+            <h3>OUR SERVICES</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </SwiperSlide>
+      </Swiper>

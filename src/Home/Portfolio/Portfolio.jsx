@@ -9,6 +9,24 @@ import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 
+const portfolioDetails = [
+  {
+    photo: img,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    head: "OUR SERVICES",
+  },
+  {
+    photo: img,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    head: "OUR SERVICES",
+  },
+  {
+    photo: img,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    head: "OUR SERVICES",
+  },
+];
+
 export default function Portfolio() {
   return (
     <section className="portfolio-section container">
@@ -43,17 +61,17 @@ export default function Portfolio() {
             spaceBetween: 40,
           },
         }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         freeMode={true}
-        pagination={false}
-        // autoplay={{ delay: 2000, disableOnInteraction: false }}
-        modules={[Autoplay, FreeMode, Pagination]}
-        className="portfolio-swiper"
+        modules={[Autoplay, FreeMode]}
+        className="mySwiper"
       >
         <SwiperSlide className="portfolio-slide">
           <div className="portfolio-card">
-            <Link to="/Projects">
-              <img src={img} alt="Project 1" className="portfolio-image" />
-            </Link>
+            <img src={img} alt="" srcset="" />
             <h3>OUR SERVICES</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -61,10 +79,11 @@ export default function Portfolio() {
             </p>
           </div>
         </SwiperSlide>
+        
         <SwiperSlide className="portfolio-slide">
           <div className="portfolio-card">
-            <Link to="/Projects">
-              <img src={img} alt="Project 1" className="portfolio-image" />
+            <Link to= "/Details">
+            <img src={img} alt="" srcset="" />
             </Link>
             <h3>OUR SERVICES</h3>
             <p>
@@ -73,54 +92,7 @@ export default function Portfolio() {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="portfolio-slide">
-          <div className="portfolio-card">
-            <Link to="/Projects">
-              <img src={img} alt="Project 1" className="portfolio-image" />
-            </Link>
-            <h3>OUR SERVICES</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="portfolio-slide">
-          <div className="portfolio-card">
-            <Link to="/Projects">
-              <img src={img} alt="Project 1" className="portfolio-image" />
-            </Link>
-            <h3>OUR SERVICES</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="portfolio-slide">
-          <div className="portfolio-card">
-            <Link to="/Projects">
-              <img src={img} alt="Project 1" className="portfolio-image" />
-            </Link>
-            <h3>OUR SERVICES</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="portfolio-slide">
-          <div className="portfolio-card">
-            <Link to="/Projects">
-              <img src={img} alt="Project 1" className="portfolio-image" />
-            </Link>
-            <h3>OUR SERVICES</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-        </SwiperSlide>
+        
       </Swiper>
     </section>
   );

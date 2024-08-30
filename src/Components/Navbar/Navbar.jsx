@@ -1,95 +1,52 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Navbar.css";
-import revealer from "circular-revealer";
-import Logo from "../../Assets/Logos/WHITE 1S.png";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './Navbar.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
+import Logo from "../../Assets/Logos/white-small.png"
 
-const Header = () => {
-  const [isRevealed, setIsRevealed] = useState(false);
-  const navRef = useRef(null);
-  const actionBtnRef = useRef(null);
+import { GrProjects } from "react-icons/gr";
+import { FaMessage } from "react-icons/fa6";
+import { FaBookOpen } from "react-icons/fa6";
+import { TbUsers } from "react-icons/tb";
 
-  useEffect(() => {
-    const actionBtn = actionBtnRef.current;
-    const nav = navRef.current;
-    const links = nav.querySelectorAll("a"); // Select all links within the nav
 
-    const revealerNav = revealer({
-      revealElementSelector: ".nav-js",
-      options: {
-        anchorSelector: ".nav-btn-js",
-      },
-    });
-
-    const toggleNav = () => {
-      setIsRevealed((prev) => !prev);
-      if (!isRevealed) {
-        revealerNav.reveal();
-      } else {
-        revealerNav.hide();
-      }
-    };
-
-    actionBtn.addEventListener("click", toggleNav);
-
-    // Add click event to each link to close the nav
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        if (isRevealed) {
-          toggleNav(); // Close the nav if a link is clicked
-        }
-      });
-    });
-
-    
-
-    return () => {
-      actionBtn.removeEventListener("click", toggleNav);
-      links.forEach((link) => {
-        link.removeEventListener("click", toggleNav);
-      });
-    };
-  }, [isRevealed]);
-
-  useEffect(() => {
-    if (navRef.current) {
-      navRef.current.setAttribute("data-active", isRevealed ? "true" : "false");
-      actionBtnRef.current.setAttribute(
-        "data-open",
-        isRevealed ? "true" : "false"
-      );
-    }
-  }, [isRevealed]);
-
-  
-
+const Navbar = () => {
   return (
-    <header>
-      <a href="/" className="logo">
-        <img src={Logo} alt="1shdeep" />
-      </a>
-      <div>
-        <button
-          className="header__button nav-btn-js"
-          type="button"
-          ref={actionBtnRef}
-        ></button>
-        <nav className="header__nav nav-js" ref={navRef}>
-          <ul className="header__menu">
-            <li className="header__menu-item">
-              <Link to="/Projects">Projects</Link>
-            </li>
-            <li className="header__menu-item">
-              <a href="/#Clients">Clients</a>
-            </li>
-            <li className="header__menu-item">
-              <a href="/#Blogs">Blogs</a>
-            </li>
-          </ul>
-        </nav>
+    <nav className="navbar">
+      <div className="navbar-left">
+        <a href="/#Clients" >
+        <button className="menu-icon">
+          <TbUsers /> {/* Users Icon */}
+        </button>
+        </a>
+
+        <a href="/#Blogs">
+        <button className="search-icon">
+          <FaBookOpen /> {/* Blogs Icon */}
+        </button>
+        </a>
       </div>
-    </header>
+
+      <div className="navbar-center">
+        <a href="/#" className="logo">
+          <img src={Logo} alt="Logo" /> {/* Replace with your logo */}
+        </a>
+      </div>
+
+      <div className="navbar-right">
+        <Link to="/Projects">
+        <button className="profile-icon">
+          <GrProjects /> {/* Projects Icon */}
+        </button>
+        </Link>
+
+        <a href="mailto:vanshdeepofficial@gmail.com">
+        <button className="cart-icon">
+          <FaMessage /> {/* Contact Icon */}
+        </button>
+        </a>
+      </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;
